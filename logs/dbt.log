@@ -1,0 +1,105 @@
+[0m13:35:19.304951 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108eefa90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f48890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f4ac10>]}
+
+
+============================== 13:35:19.307915 | 3053a508-4f35-4359-b594-02256356aad1 ==============================
+[0m13:35:19.307915 [info ] [MainThread]: Running with dbt=1.9.6
+[0m13:35:19.308271 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/Users/shashank/.dbt', 'quiet': 'False', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'invocation_command': 'dbt run', 'fail_fast': 'False', 'partial_parse': 'True', 'no_print': 'None', 'write_json': 'True', 'debug': 'False', 'use_colors': 'True', 'log_path': 'logs', 'empty': 'False', 'target_path': 'None', 'log_cache_events': 'False', 'static_parser': 'True', 'log_format': 'default', 'printer_width': '80', 'indirect_selection': 'eager', 'introspect': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False'}
+[0m13:35:19.308650 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/shashank/Documents/GitHub/Snowfall-Signal/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:35:19.310342 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.043727458, "process_in_blocks": "0", "process_kernel_time": 0.139517, "process_mem_max_rss": "103366656", "process_out_blocks": "0", "process_user_time": 0.618521}
+[0m13:35:19.310738 [debug] [MainThread]: Command `dbt run` failed at 13:35:19.310681 after 0.04 seconds
+[0m13:35:19.310987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1048d96d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108eeecd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108eeee50>]}
+[0m13:35:19.311205 [debug] [MainThread]: Flushing usage events
+[0m13:35:19.551229 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:08:57.420334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10554f390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055c3b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055c3f90>]}
+
+
+============================== 00:08:57.423879 | 1136179e-b48a-484a-b063-c3e611f75835 ==============================
+[0m00:08:57.423879 [info ] [MainThread]: Running with dbt=1.9.6
+[0m00:08:57.424253 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'introspect': 'True', 'debug': 'False', 'profiles_dir': '/Users/shashank/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs', 'quiet': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'log_format': 'default', 'invocation_command': 'dbt seed', 'no_print': 'None', 'partial_parse': 'True', 'log_cache_events': 'False', 'write_json': 'True', 'empty': 'None', 'target_path': 'None', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False'}
+[0m00:08:57.424594 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/shashank/Documents/GitHub/Snowfall-Signal/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:08:57.426344 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 0.04450575, "process_in_blocks": "0", "process_kernel_time": 0.133367, "process_mem_max_rss": "102858752", "process_out_blocks": "0", "process_user_time": 0.608362}
+[0m00:08:57.426602 [debug] [MainThread]: Command `dbt seed` failed at 00:08:57.426549 after 0.04 seconds
+[0m00:08:57.426822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1011fbf90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055d9f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055a6e10>]}
+[0m00:08:57.427092 [debug] [MainThread]: Flushing usage events
+[0m00:08:57.836785 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:21:06.983585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102b34610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b04c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105afd7d0>]}
+
+
+============================== 00:21:06.986729 | 841abfbb-9c82-4f1a-af27-fc6df365ad84 ==============================
+[0m00:21:06.986729 [info ] [MainThread]: Running with dbt=1.9.6
+[0m00:21:06.987085 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/shashank/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:21:06.996600 [info ] [MainThread]: dbt version: 1.9.6
+[0m00:21:06.996853 [info ] [MainThread]: python version: 3.11.1
+[0m00:21:06.997026 [info ] [MainThread]: python path: /Users/shashank/Documents/GitHub/Snowfall-Signal/snowfall_env/bin/python3.11
+[0m00:21:06.997177 [info ] [MainThread]: os info: macOS-15.5-arm64-arm-64bit
+[0m00:21:07.608631 [info ] [MainThread]: Using profiles dir at /Users/shashank/.dbt
+[0m00:21:07.609007 [info ] [MainThread]: Using profiles.yml file at /Users/shashank/.dbt/profiles.yml
+[0m00:21:07.609189 [info ] [MainThread]: Using dbt_project.yml file at /Users/shashank/Documents/GitHub/Snowfall-Signal/dbt_project.yml
+[0m00:21:07.611275 [info ] [MainThread]: adapter type: duckdb
+[0m00:21:07.611465 [info ] [MainThread]: adapter version: 1.9.3
+[0m00:21:07.611644 [info ] [MainThread]: Configuration:
+[0m00:21:07.611795 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:21:07.611940 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m00:21:07.612078 [info ] [MainThread]: Required dependencies:
+[0m00:21:07.612252 [debug] [MainThread]: Executing "git --help"
+[0m00:21:07.632547 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:21:07.633264 [debug] [MainThread]: STDERR: "b''"
+[0m00:21:07.633586 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:21:07.633835 [info ] [MainThread]: Connection:
+[0m00:21:07.634017 [info ] [MainThread]:   database: plaid_fraud
+[0m00:21:07.634154 [info ] [MainThread]:   schema: main
+[0m00:21:07.634287 [info ] [MainThread]:   path: /Users/shashank/Documents/GitHub/Snowfall-Signal/plaid_fraud.duckdb
+[0m00:21:07.634418 [info ] [MainThread]:   config_options: None
+[0m00:21:07.634541 [info ] [MainThread]:   extensions: None
+[0m00:21:07.634665 [info ] [MainThread]:   settings: {}
+[0m00:21:07.634785 [info ] [MainThread]:   external_root: .
+[0m00:21:07.634907 [info ] [MainThread]:   use_credential_provider: None
+[0m00:21:07.635029 [info ] [MainThread]:   attach: None
+[0m00:21:07.635148 [info ] [MainThread]:   filesystems: None
+[0m00:21:07.635264 [info ] [MainThread]:   remote: None
+[0m00:21:07.635382 [info ] [MainThread]:   plugins: None
+[0m00:21:07.635504 [info ] [MainThread]:   disable_transactions: False
+[0m00:21:07.635799 [info ] [MainThread]: Registered adapter: duckdb=1.9.3
+[0m00:21:07.738999 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m00:21:07.777693 [debug] [MainThread]: Using duckdb connection "debug"
+[0m00:21:07.777945 [debug] [MainThread]: On debug: select 1 as id
+[0m00:21:07.778098 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:21:07.792321 [debug] [MainThread]: SQL status: OK in 0.014 seconds
+[0m00:21:07.792883 [debug] [MainThread]: On debug: Close
+[0m00:21:07.793101 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m00:21:07.793276 [info ] [MainThread]: [31m1 check failed:[0m
+[0m00:21:07.793419 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/shashank/Documents/GitHub/Snowfall-Signal/dbt_project.yml> not found
+
+[0m00:21:07.795323 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.85021, "process_in_blocks": "0", "process_kernel_time": 0.226919, "process_mem_max_rss": "129024000", "process_out_blocks": "0", "process_user_time": 0.79566}
+[0m00:21:07.795716 [debug] [MainThread]: Command `dbt debug` failed at 00:21:07.795658 after 0.85 seconds
+[0m00:21:07.795945 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:21:07.796150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100cb6a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105c359d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b85710>]}
+[0m00:21:07.796390 [debug] [MainThread]: Flushing usage events
+[0m00:21:08.045514 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:44:20.544011 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053b4e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053f9890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053697d0>]}
+
+
+============================== 18:44:20.547767 | d6d6183b-75fd-468c-86d2-62eb77d8d3e4 ==============================
+[0m18:44:20.547767 [info ] [MainThread]: Running with dbt=1.9.6
+[0m18:44:20.548203 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/shashank/.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt seed --full-refresh', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m18:44:20.548552 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/shashank/Documents/GitHub/Snowfall-Signal/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:44:20.551630 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 0.04468325, "process_in_blocks": "0", "process_kernel_time": 0.132952, "process_mem_max_rss": "102416384", "process_out_blocks": "0", "process_user_time": 0.631878}
+[0m18:44:20.551941 [debug] [MainThread]: Command `dbt seed` failed at 18:44:20.551893 after 0.05 seconds
+[0m18:44:20.552174 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100eba990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1048b80d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053f9c90>]}
+[0m18:44:20.552392 [debug] [MainThread]: Flushing usage events
+[0m18:44:20.819274 [debug] [MainThread]: An error was encountered while trying to flush usage events
