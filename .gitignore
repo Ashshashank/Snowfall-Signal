@@ -1,0 +1,5 @@
+*.csv
+*.zip
+*.duckdb
+.DS_Store
+snowfall_env/
