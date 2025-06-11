@@ -70,3 +70,5 @@ streamlit run app.py
 Shashank Adepu
 M.S. Computer Information Systems, Boston University
 [LinkedIn](https://www.linkedin.com/in/shashank1ad/) | shashank1adepu@gmail.com
+
+![alt text](image.png)
