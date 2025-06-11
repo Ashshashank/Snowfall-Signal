@@ -6,4 +6,4 @@ SELECT
     WHEN amount > 100000 THEN 'medium'
     ELSE 'low'
   END AS risk_level
-FROM main."raw_transactions"
+FROM main."raw_transactions_sample"

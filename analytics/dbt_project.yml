@@ -11,8 +11,8 @@ profile: 'plaid_dbt_project'
 
 seeds:
   plaid_dbt_project:
-    raw_transactions:
-      file: raw_transactions.csv
+    raw_transactions_sample:
+      file: raw_transactions_sample.csv
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be

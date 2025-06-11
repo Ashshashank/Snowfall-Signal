@@ -59,13 +59,61 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 import matplotlib.pyplot as plt
+import os
 
 # Streamlit settings
 st.set_page_config(page_title="Plaid Fraud Detection", layout="wide")
 st.title("🚨 Plaid Fraud Detection Dashboard")
 
-# ✅ NEW: Connect to DuckDB from project root
-conn = duckdb.connect("/Users/shashank/Documents/GitHub/Snowfall-Signal/analytics/plaid_fraud.duckdb")
+# Attempt to use the full DB path first (local dev)
+LOCAL_DB_PATH = "/Users/shashank/Documents/GitHub/Snowfall-Signal/analytics/plaid_fraud.duckdb"
+DEFAULT_DB_PATH = "plaid_fraud.duckdb"  # used in Streamlit Cloud
+
+if os.path.exists(LOCAL_DB_PATH):
+    conn = duckdb.connect(LOCAL_DB_PATH)
+else:
+    # ✅ Streamlit fallback: rebuild from CSV
+    conn = duckdb.connect(DEFAULT_DB_PATH)
+    if not os.path.exists(DEFAULT_DB_PATH):
+        st.warning("Building DuckDB from CSV (first-time setup)...")
+        conn.execute("""
+            CREATE TABLE raw_transactions_sample AS
+            SELECT * FROM read_csv_auto('analytics/seeds/raw_transactions_sample.csv')
+        """)
+        # Optional: create views to simulate dbt models
+        conn.execute("""
+            CREATE TABLE stg_transactions AS
+            SELECT *,
+                CASE WHEN isfraud = 1 THEN 'fraud' ELSE 'non_fraud' END AS fraud_label,
+                CASE 
+                    WHEN amount > 1000000 THEN 'high'
+                    WHEN amount > 100000 THEN 'medium'
+                    ELSE 'low'
+                END AS risk_level
+            FROM raw_transactions_sample
+        """)
+        conn.execute("""
+            CREATE TABLE agg_fraud_by_step AS
+            SELECT
+                CAST(step AS INTEGER) AS day,
+                COUNT(*) AS txn_count,
+                SUM(CASE WHEN isfraud = 1 THEN 1 ELSE 0 END) AS fraud_count,
+                ROUND(100.0 * SUM(CASE WHEN isfraud = 1 THEN 1 ELSE 0 END) / COUNT(*), 2) AS fraud_rate_pct
+            FROM stg_transactions
+            GROUP BY day
+            ORDER BY day
+        """)
+        conn.execute("""
+            CREATE TABLE agg_risk_band_summary AS
+            SELECT
+                risk_level,
+                COUNT(*) AS txn_count,
+                SUM(isfraud) AS fraud_txns,
+                ROUND(100.0 * SUM(isfraud) / COUNT(*), 2) AS fraud_rate_pct
+            FROM stg_transactions
+            GROUP BY risk_level
+            ORDER BY fraud_rate_pct DESC
+        """)
 
 # Load tables
 fraud_by_step = pd.read_sql_query("SELECT * FROM agg_fraud_by_step", conn)

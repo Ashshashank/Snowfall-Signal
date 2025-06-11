@@ -1,5 +1,25 @@
+# ❌ Ignore all CSVs by default
 *.csv
+
+# ✅ But keep this cleaned sample seed
+!analytics/seeds/raw_transactions_sample.csv
+
+# ❌ Ignore heavy raw datasets
+data/PS_20174392719_1491204439457_log.csv
+analytics/seeds/raw_transactions.csv
+
+# ❌ Ignore DuckDB database
+analytics/plaid_fraud.duckdb
+
+# ❌ Ignore zip files and system files
 *.zip
-*.duckdb
 .DS_Store
+
+# ❌ Ignore the virtual environment folder
 snowfall_env/
+
+# ✅ Keep important project files
+!dashboard/app.py
+!analytics/models/stg_transactions.sql
+!analytics/dbt_project.yml
+!requirements.txt
