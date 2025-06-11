@@ -25,10 +25,14 @@ This project simulates a real-world fraud detection system inspired by Plaid. Us
 
 ## 📊 Dashboard Preview
 
-Run locally to view:
+Run locally or check out the live version below:
+
+🌐 **Live Streamlit App**: [ashshashank-snowfall-signal.streamlit.app](https://ashshashank-snowfall-signal.streamlit.app)
+
+The dashboard includes:
 - 📈 Fraud Trend Over Time
 - 🧠 Risk Band vs Fraud Rate
-- 📋 Explore Transactions
+- 📋 Explore Sample Transactions
 
 ---
 
